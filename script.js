@@ -1,3 +1,23 @@
+let add_innovator_btn = document.getElementById("add-innovator-btn");
+let innovator_details_form = document.querySelector("form");
+console.log(innovator_details_form);
+
+// change the display value of the innovator_details_form to none
+function showForm(){
+    if(innovator_details_form !== "block"){
+        innovator_details_form.style.display = "block";
+    }
+}
+
+// change the display value of the innovator_details_form to block
+function hideForm(){
+    if(innovator_details_form !== "none"){
+        innovator_details_form.style.display = "none";
+    }
+}
+
+
+// all the currently available innovators 
 let innovators = {
     Albin:{
         "first-name": "Albin",
@@ -32,3 +52,7 @@ let innovators = {
 }
 
 console.log(innovators);
+
+
+// invoke function
+add_innovator_btn.addEventListener("click", showForm);
